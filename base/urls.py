@@ -16,9 +16,11 @@ Including another URLconf
 
 from base import views
 from django.conf.urls import url
+from django.contrib import admin
 
 urlpatterns = (
     # 计数器接口
+    url(r'^admin/', admin.site.urls),
     url(r'^^api/count(/)?$', views.counter),
 
     # 获取主页
